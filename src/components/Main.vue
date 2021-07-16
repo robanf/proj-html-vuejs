@@ -3,17 +3,33 @@
       <div class="container">
         <div class="row">
           <div class="col-8">
-            ciao sono quello super mega iper grosso
+            <img class="my-img-cat" src="@/img/cat_1-1540x750.jpg" alt="">
+            <div><strong>Softwere Developer</strong></div>
           </div>
-          <div class="col-4">
-            <div>ciao sono il primo</div>
-            <div>ciao sono il secondo </div>
+          <div class="col-4 my-img-cat-second">
+            <div class="mb-3">
+              <img src="@/img/cat_2-370x155.jpg" alt="">
+              <div><strong>Art</strong></div>
+            </div>
+            <div>
+              <img src="@/img/cat_3-370x155.jpg" alt="">
+              <div><strong>Material Design</strong></div>
+            </div>
           </div>
         </div>
-        <div class="row my-4">
-            <div class="col-4">ciao </div>
-            <div class="col-4"> ciao </div>
-            <div class="col-4"> ciao</div>
+        <div class="row my-4 my-img-cat-terzo">
+            <div class="col-4">
+              <img src="@/img/cat_4-370x155.jpg" alt="">
+              <div><strong>Exercize</strong></div>
+            </div>
+            <div class="col-4">
+              <img src="@/img/cat_5-370x155.jpg" alt="">
+              <div><strong>Music</strong></div>
+            </div>
+            <div class="col-4">
+              <img src="@/img/cat_6-370x155.jpg" alt="">
+              <div><strong>Photography</strong></div>
+            </div>
         </div>
       </div>
 
@@ -93,6 +109,34 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+  .my-img-cat{
+    width: 100%;
+  }
 
+  .my-img-cat-second{
+    div{
+      height: 50%;
+      width: 100%;
+
+      img{
+        height: 82%;
+        width: 89%;
+      }
+
+    }
+  }
+
+  .my-img-cat-terzo{
+      div{
+      height: 100%;
+      width: calc(98%/3);
+
+      img{
+        height: 82%;
+        width: 95%;
+      }
+
+    }
+  }
 </style>
