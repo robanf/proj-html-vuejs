@@ -3,31 +3,31 @@
       <div class="container">
         <div class="row">
           <div class="col-8">
-            <img class="my-img-cat" src="@/img/cat_1-1540x750.jpg" alt="">
+            <img class="my-img-cat" src="/img/cat_1-1540x750.jpg" alt="">
             <div><strong>Softwere Developer</strong></div>
           </div>
           <div class="col-4 my-img-cat-second">
             <div class="mb-3">
-              <img src="@/img/cat_2-370x155.jpg" alt="">
+              <img src="/img/cat_2-370x155.jpg" alt="">
               <div><strong>Art</strong></div>
             </div>
             <div>
-              <img src="@/img/cat_3-370x155.jpg" alt="">
+              <img src="/img/cat_3-370x155.jpg" alt="">
               <div><strong>Material Design</strong></div>
             </div>
           </div>
         </div>
         <div class="row my-4 my-img-cat-terzo">
             <div class="col-4">
-              <img src="@/img/cat_4-370x155.jpg" alt="">
+              <img src="/img/cat_4-370x155.jpg" alt="">
               <div><strong>Exercize</strong></div>
             </div>
             <div class="col-4">
-              <img src="@/img/cat_5-370x155.jpg" alt="">
+              <img src="/img/cat_5-370x155.jpg" alt="">
               <div><strong>Music</strong></div>
             </div>
             <div class="col-4">
-              <img src="@/img/cat_6-370x155.jpg" alt="">
+              <img src="/img/cat_6-370x155.jpg" alt="">
               <div><strong>Photography</strong></div>
             </div>
         </div>
@@ -60,15 +60,43 @@
           </div>
 
           <div class="row">
-            <div v-for="(element,index) in array" :key="index" class="col-2 mx-4">
+            <div v-for="(element,index) in array" :key="index" class="col-2 ">
               <div class="card" style="height:20rem ;width: 15rem;">
-                <img :src="'@/img/'+element.img" class="card-img-top" alt="...">
+                <img :src="'/img/'+element.img" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">{{element.type}}</h5>
                   <p class="card-text"><strong>{{element.name}}</strong></p>
                   <hr>
                   <p class="card-text">
-                    <span v-if="element.vote!=0"> <span v-for="(e,i) in element.vote" :key="i"><img src="@/img/starfull.svg" alt=""></span><span v-for="(e,i) in 5-element.vote" :key="i"><img src="@/img/staremptyl.svg" alt=""></span></span>    
+                    <span v-if="element.vote!=0"> <span v-for="(e,i) in element.vote" :key="i"><img src="/img/starfull.svg" alt=""></span><span v-for="(e,i) in 5-element.vote" :key="i"><img src="/img/staremptyl.svg" alt=""></span></span>    
+                    <span v-else><strong>{{element.time}} </strong></span>
+                  <strong> ${{element.cost}}</strong></p>
+                </div>
+              </div>
+            </div>
+            <div v-for="(element,index) in array" :key="index" class="col-2 ">
+              <div class="card" style="height:20rem ;width: 15rem;">
+                <img :src="'/img/'+element.img" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{element.type}}</h5>
+                  <p class="card-text"><strong>{{element.name}}</strong></p>
+                  <hr>
+                  <p class="card-text">
+                    <span v-if="element.vote!=0"> <span v-for="(e,i) in element.vote" :key="i"><img src="/img/starfull.svg" alt=""></span><span v-for="(e,i) in 5-element.vote" :key="i"><img src="/img/staremptyl.svg" alt=""></span></span>    
+                    <span v-else><strong>{{element.time}} </strong></span>
+                  <strong> ${{element.cost}}</strong></p>
+                </div>
+              </div>
+            </div>
+            <div v-for="(element,index) in array" :key="index" class="col-2 ">
+              <div class="card" style="height:20rem ;width: 15rem;">
+                <img :src="'/img/'+element.img" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{element.type}}</h5>
+                  <p class="card-text"><strong>{{element.name}}</strong></p>
+                  <hr>
+                  <p class="card-text">
+                    <span v-if="element.vote!=0"> <span v-for="(e,i) in element.vote" :key="i"><img src="/img/starfull.svg" alt=""></span><span v-for="(e,i) in 5-element.vote" :key="i"><img src="/img/staremptyl.svg" alt=""></span></span>    
                     <span v-else><strong>{{element.time}} </strong></span>
                   <strong> ${{element.cost}}</strong></p>
                 </div>
@@ -158,7 +186,7 @@ export default {
 
   .second-jumbo{
     height: 83vh;
-    background-image: url("../img/Untitled-1-1-1-1-1.png");
+    background-image: url("/img/Untitled-1-1-1-1-1.png");
       h2{
         padding-top: 30px;
         font-size: 67px;

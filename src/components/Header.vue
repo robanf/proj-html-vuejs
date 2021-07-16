@@ -49,7 +49,7 @@
                   <div class="jumbo-text">With over 1200 courses in 18 subjects, you're guaranteed to find something that's right for you.</div>
                   <div class="btn btn-primary rounded-pill my-btn">Join for free </div>
               </div>
-              <div class="col-6"><img src="@/img/base.png" alt=""></div>
+              <div class="col-6"><img src="/img/base.png" alt=""></div>
           </div>
         </div>
         <div class="container mb-5">
