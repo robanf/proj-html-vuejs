@@ -96,7 +96,7 @@ export default {
   }
   .box-test{
     height: 215px;
-    width: 400px;
+    width: 379px;
     background-color: #F2F6FB;
     padding: 10px 20px;
       .icon{

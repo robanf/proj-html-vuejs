@@ -33,12 +33,13 @@
         </div>
       </div>
 
-      <div class="container-fluid">
+      <div class="container-fluid second-jumbo d-flex align-items-center">
         <div class="row">
-          <div class="col-6">
-            <h2>scritta prima col</h2>
+          <div class="col-6 ps-5">
+            <h2>Limitless learning, more possibilities</h2>
+            <div class="jumbo-text my-4">Online courses open the opportunity for learning to almost anyone, regardless of their scheduling commitments.</div>
+            <div class="btn btn-primary rounded-pill my-btn"> Read More</div>
           </div>
-          <div class="col-6"> immagine col due</div>
         </div>
       </div>
 
@@ -59,7 +60,20 @@
           </div>
 
           <div class="row">
-            <div class="col-2">my oggetti</div>
+            <div v-for="(element,index) in array" :key="index" class="col-2 mx-4">
+              <div class="card" style="height:20rem ;width: 15rem;">
+                <img :src="'@/img/'+element.img" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{element.type}}</h5>
+                  <p class="card-text"><strong>{{element.name}}</strong></p>
+                  <hr>
+                  <p class="card-text">
+                    <span v-if="element.vote!=0"> <span v-for="(e,i) in element.vote" :key="i"><img src="@/img/starfull.svg" alt=""></span><span v-for="(e,i) in 5-element.vote" :key="i"><img src="@/img/staremptyl.svg" alt=""></span></span>    
+                    <span v-else><strong>{{element.time}} </strong></span>
+                  <strong> ${{element.cost}}</strong></p>
+                </div>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -105,7 +119,9 @@
 
 <script>
 export default {
-
+  props:{
+    array:Array
+  }
 }
 </script>
 
@@ -121,7 +137,7 @@ export default {
 
       img{
         height: 82%;
-        width: 89%;
+        width: 95%;
       }
 
     }
@@ -138,5 +154,22 @@ export default {
       }
 
     }
+  }
+
+  .second-jumbo{
+    height: 83vh;
+    background-image: url("../img/Untitled-1-1-1-1-1.png");
+      h2{
+        padding-top: 30px;
+        font-size: 67px;
+      }
+      .jumbo-text{
+        font-size: 25px;
+        margin: 15px 0px;
+      }
+      .my-btn{
+        font-size: 25px;
+        padding: 10px 20px;
+      }
   }
 </style>
