@@ -74,34 +74,6 @@
                 </div>
               </div>
             </div>
-            <div v-for="(element,index) in array" :key="index" class="col-2 ">
-              <div class="card" style="height:20rem ;width: 15rem;">
-                <img :src="'/img/'+element.img" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">{{element.type}}</h5>
-                  <p class="card-text"><strong>{{element.name}}</strong></p>
-                  <hr>
-                  <p class="card-text">
-                    <span v-if="element.vote!=0"> <span v-for="(e,i) in element.vote" :key="i"><img src="/img/starfull.svg" alt=""></span><span v-for="(e,i) in 5-element.vote" :key="i"><img src="/img/staremptyl.svg" alt=""></span></span>    
-                    <span v-else><strong>{{element.time}} </strong></span>
-                  <strong> ${{element.cost}}</strong></p>
-                </div>
-              </div>
-            </div>
-            <div v-for="(element,index) in array" :key="index" class="col-2">
-              <div class="card" style="height:20rem ;width: 15rem;">
-                <img :src="'/img/'+element.img" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">{{element.type}}</h5>
-                  <p class="card-text"><strong>{{element.name}}</strong></p>
-                  <hr>
-                  <p class="card-text">
-                    <span v-if="element.vote!=0"> <span v-for="(e,i) in element.vote" :key="i"><img src="/img/starfull.svg" alt=""></span><span v-for="(e,i) in 5-element.vote" :key="i"><img src="/img/staremptyl.svg" alt=""></span></span>    
-                    <span v-else><strong>{{element.time}} </strong></span>
-                  <strong> ${{element.cost}}</strong></p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -152,12 +124,27 @@
         <div class="row">       
           <h3>slider</h3>
         </div>
-        <div class="row">
-            <div class="col">
-                      
-
-
+        <div class="row flex-nowrap  ">
+            <div v-for="(element,index) in array" :key="'A'+index" class="col-2 ">
+              <div v-if="count-6<index<count">
+              <div class="card" style="height:20rem ;width: 15rem;">
+                <img :src="'/img/'+element.img" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{element.type}}</h5>
+                  <p class="card-text"><strong>{{element.name}}</strong></p>
+                  <hr>
+                  <p class="card-text">
+                    <span v-if="element.vote!=0"> <span v-for="(e,i) in element.vote" :key="i"><img src="/img/starfull.svg" alt=""></span><span v-for="(e,i) in 5-element.vote" :key="i"><img src="/img/staremptyl.svg" alt=""></span></span>    
+                    <span v-else><strong>{{element.time}} </strong></span>
+                  <strong> ${{element.cost}}</strong></p>
+                </div>
+              </div>
+              </div>
             </div>
+            
+        </div>
+        <div class="row">
+          <button @onclick='nextitem'>ciao</button>
         </div>
       </div>
 
@@ -174,6 +161,18 @@
 export default {
   props:{
     array:Array
+  },
+  data(){
+    return{
+      overarray:[],
+      count:7,
+    }
+  },
+  methods:{
+    nextitem(){
+      console.log(this.count);
+      this.count+=1
+    }
   }
 }
 </script>
