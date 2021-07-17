@@ -124,9 +124,8 @@
         <div class="row">       
           <h3>slider</h3>
         </div>
-        <div class="row flex-nowrap  ">
+        <div class="row flex-nowrap  overflow-hidden">
             <div v-for="(element,index) in array" :key="'A'+index" class="col-2 ">
-              <div v-if="count-6<index<count">
               <div class="card" style="height:20rem ;width: 15rem;">
                 <img :src="'/img/'+element.img" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -140,18 +139,27 @@
                 </div>
               </div>
               </div>
-            </div>
-            
-        </div>
-        <div class="row">
-          <button @onclick='nextitem'>ciao</button>
         </div>
       </div>
 
       <div class="container">
         <div class="row">
-          <div class="col-6">roba gemella</div>
-          <div class="col-6">roba gemella</div>
+          <div class="col-6 my-twin d-flex align-items-center mx-4">
+            <img src="/img/image_box_1-221x231.png" alt="">
+            <div class="mx-3">
+              <h3><strong>Become an Instructor</strong></h3>
+              <div class="my-2">Teach what you love. Masterstudy gives you the tools to create a course.</div>
+              <div class="btn btn-primary rounded-pill my-btn">START TECHING</div>
+            </div>
+          </div>
+          <div class="col-6 my-twin d-flex align-items-center mx-4">
+            <img src="/img/image_box_2-234x231.png" alt="">
+            <div class="mx-3">
+              <h3><strong>Setup For Business</strong></h3>
+              <div class="my-2">Get unlimited access to 2,500 of Udemy’s top courses for your team.</div>
+              <div class="btn btn-primary rounded-pill my-btn">DOING BUISNESS</div>
+            </div>
+          </div>
         </div>
       </div>
   </div>
@@ -263,5 +271,13 @@ export default {
         padding: 5px 40px;
       }
   }
+
+  .my-twin{
+    height: 400px;
+    width: 600px;
+    border: 1px solid black;
+    padding: 60px 40px;
+  }
+
 
 </style>
