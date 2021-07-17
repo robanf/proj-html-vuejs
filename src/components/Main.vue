@@ -146,7 +146,7 @@
         <div class="row">
           <div class="col-6 my-twin d-flex align-items-center mx-4">
             <img src="/img/image_box_1-221x231.png" alt="">
-            <div class="mx-3">
+            <div class="ms-3">
               <h3><strong>Become an Instructor</strong></h3>
               <div class="my-2">Teach what you love. Masterstudy gives you the tools to create a course.</div>
               <div class="btn btn-primary rounded-pill my-btn">START TECHING</div>
@@ -154,7 +154,7 @@
           </div>
           <div class="col-6 my-twin d-flex align-items-center mx-4">
             <img src="/img/image_box_2-234x231.png" alt="">
-            <div class="mx-3">
+            <div class="ms-3">
               <h3><strong>Setup For Business</strong></h3>
               <div class="my-2">Get unlimited access to 2,500 of Udemy’s top courses for your team.</div>
               <div class="btn btn-primary rounded-pill my-btn">DOING BUISNESS</div>
