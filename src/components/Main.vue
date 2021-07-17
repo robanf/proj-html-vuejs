@@ -45,8 +45,8 @@
 
       <div class="container-fluid my-5">
         <div class="row">
-          <div class="col">
-            <h5>categoria</h5>
+          <div class="col text-center filtro">
+            <h2>Recent courses</h2>
             <ul>
               <li class="d-inline-block mx-2">categoria</li>
               <li class="d-inline-block mx-2">categoria</li>
@@ -88,7 +88,7 @@
                 </div>
               </div>
             </div>
-            <div v-for="(element,index) in array" :key="index" class="col-2 ">
+            <div v-for="(element,index) in array" :key="index" class="col-2">
               <div class="card" style="height:20rem ;width: 15rem;">
                 <img :src="'/img/'+element.img" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -103,36 +103,61 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
 
-      <div class="container-fluid my-5">
+      <div class="container-fluid mt-5 my-numbers">
         <div class="row">
-          <h3>scritte centrale</h3>
-          <div>scritta sotto</div>
+          <div class="col text-center filtro">
+            <h2>We are Proud</h2>
+            <div>Certificate courses are instructed by highly educated and qualified instructors who hold doctoral and master’s level degrees.</div>
+
+          </div>
         </div>
-        <div class="row">
-          <div class="col-3">contatori</div>
-          <div class="col-3">contatori</div>
-          <div class="col-3">contatori</div>
-          <div class="col-3">contatori</div>
+        <div class="row my-5 my-data-num">
+          <div class="col-3 text-center">
+               <h2>2000</h2>
+               <div>STUDENTS</div>
+            </div>
+          <div class="col-3 text-center border-start border-3">
+              <h2>950</h2>
+              <div>COURSES</div>
+            </div>
+          <div class="col-3 text-center border-start border-end border-3">
+               <h2>1600</h2>
+               <div>HOURS VIDEO</div>
+            </div>
+          <div class="col-3 text-center">
+                <h2>150</h2> 
+                <div>COUNTRIES REACHED</div>
+            </div>
         </div>
       </div>
 
-      <div class="container-fluid my-5">
-        <div class="row">
-          <div class="col-7">iscriviti</div>
-          <div class="col-5">barra per farlo</div>
+      <div class="container-fluid">
+        <div class="row my-iscrizione align-items-center">
+          <div class="col-7">
+                <h3>Subscribe our newsletter</h3>
+                <div>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words</div>
+            </div>
+          <div class="col-5">
+            <h5>YOUR E-MAIL ADDRESS</h5>
+            <input type="text" class="sub-text" placeholder="Inserisci la tua email">
+            <div class="btn btn-primary">Subscribe</div>
+          </div>
         </div>
       </div>
 
-      <div class="container-fluid my-5">
+      <div class="container-fluid mb-5">
         <div class="row">       
           <h3>slider</h3>
         </div>
         <div class="row">
-          zona dove andra lo slider
+            <div class="col">
+                      
+
+
+            </div>
         </div>
       </div>
 
@@ -154,6 +179,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
   .my-img-cat{
     width: 100%;
   }
@@ -200,4 +226,43 @@ export default {
         padding: 10px 20px;
       }
   }
+
+  .filtro{
+    h2{
+      font-size: 50px;
+    }
+    ul{
+      margin: 20px 0px;
+
+    }
+  }
+
+  .my-numbers{
+    height: 80vh;
+    background-color: #F0F4FA;
+    background-image: url("/img/we_proud.png");
+    background-size:cover ;
+    background-position: center;
+    .my-data-num{
+      padding: 30px;
+      padding-bottom: 50px;
+      h2{
+        font-size: 70px;
+      }
+      div{
+        font-size: 25px;
+      }
+    }
+
+  }
+
+  .my-iscrizione{
+    height: 300px;
+    background-color: #4ED7A8;
+    color: white;
+      .sub-text{
+        padding: 5px 40px;
+      }
+  }
+
 </style>
