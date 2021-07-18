@@ -147,9 +147,6 @@
               <div class="p-3 my-arrow mx-3" @click="right"><i class="fas fa-arrow-right"></i></div>
             </div>
         </div>
-        <div class="row">
-              <div class="box" :style="'margin-left:'+muovi+'px;'"></div>
-        </div>
       </div>
 
       <div class="container">
