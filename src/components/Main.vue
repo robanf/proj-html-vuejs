@@ -125,8 +125,8 @@
         <div class="row">       
           <h3>slider</h3>
         </div>
-        <div class="row flex-nowrap   my-slide" :style="'transform: translateX('+muovi+'px);'">
-            <div v-for="(element,index) in array" :key="'A'+index" class="col-2 ">
+        <div class="row flex-nowrap overflow-hidden my-slide" >
+            <div v-for="(element,index) in array" :key="'A'+index" class="col-2 " :style="'transform: translateX('+muovi+'px);'">
               <div class="card" style="height:20rem ;width: 15rem;">
                 <img :src="'/img/'+element.img" class="card-img-top" alt="...">
                 <div class="card-body">
