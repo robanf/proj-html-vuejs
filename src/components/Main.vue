@@ -75,6 +75,7 @@
               </div>
             </div>
           </div>
+
         </div>
       </div>
 
@@ -124,7 +125,7 @@
         <div class="row">       
           <h3>slider</h3>
         </div>
-        <div class="row flex-nowrap  overflow-hidden">
+        <div class="row flex-nowrap   my-slide" :style="'transform: translateX('+muovi+'px);'">
             <div v-for="(element,index) in array" :key="'A'+index" class="col-2 ">
               <div class="card" style="height:20rem ;width: 15rem;">
                 <img :src="'/img/'+element.img" class="card-img-top" alt="...">
@@ -139,6 +140,15 @@
                 </div>
               </div>
               </div>
+        </div>
+        <div class="row d-flex justify-content-center my-4">
+            <div class="col d-flex justify-content-center">
+              <div class="p-3 my-arrow mx-3" id="right" @click="left"><i class="fas fa-arrow-left"></i></div>
+              <div class="p-3 my-arrow mx-3" @click="right"><i class="fas fa-arrow-right"></i></div>
+            </div>
+        </div>
+        <div class="row">
+              <div class="box" :style="'margin-left:'+muovi+'px;'"></div>
         </div>
       </div>
 
@@ -174,12 +184,27 @@ export default {
     return{
       overarray:[],
       count:7,
+      muovi:0,
     }
   },
   methods:{
     nextitem(){
       console.log(this.count);
       this.count+=1
+    },
+    right(){
+      if(this.muovi>-1518){
+        this.muovi-=253;
+
+      }
+        console.log(this.muovi);
+        /* -1771 numero limite */
+    },
+    left(){
+      if(this.muovi!=0){
+        this.muovi+=253;
+
+      }
     }
   }
 }
@@ -211,7 +236,7 @@ export default {
 
       img{
         height: 82%;
-        width: 95%;
+        width: 95%
       }
 
     }
@@ -278,6 +303,49 @@ export default {
     border: 1px solid black;
     padding: 60px 40px;
   }
+
+  .my-arrow{
+    background-color: wheat;
+     animation-name:slidein;
+     animation-duration: 3s;
+  }
+
+  
+
+  .my-slide{
+     animation-duration: 3s;
+      animation-name: slidein;
+
+  }
+
+  .box{
+    height: 50px;
+    width: 50px;
+    background-color: crimson;
+  }
+
+
+      
+.slide-enter-enter-active {
+  transition: slidein .3s infinite;
+}
+
+.slide-fade-enter
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(100px);
+}
+
+    @keyframes slidein {
+              
+              from {
+              margin-left: 100%;
+            }
+
+            to {
+              margin-left: 0%;
+            }
+          }
+
 
 
 </style>
