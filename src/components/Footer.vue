@@ -1,6 +1,6 @@
 <template>
   <div>
-      <div class="container-fluid my-5">
+      <div class="container-fluid mb-5 ">
         <div class="row">
           <div class="col-12 img-foot d-flex align-items-center">
               <div class="big-white d-flex  justify-content-center flex-column p-5">
@@ -14,7 +14,7 @@
           </div>
         </div>
       </div>
-      <div class="container my-5">
+      <div class="container my-5  fixed-bottom my-foot-bot">
         <div class="row">
           <div class="col-3">
             <h3>About</h3>
@@ -79,6 +79,7 @@ export default {
 <style lang="scss" scoped>
   .img-foot{
     height: 90vh;
+    margin-bottom: 240px;
     background-image: url("/img/micah-296507-unsplash-1-copy-1-1920x700.jpg");
     background-size:cover ;
     background-position: center;
@@ -93,5 +94,9 @@ export default {
   .img-strana{
     height: 75px;
     width: 80px;
+  }
+
+  .my-foot-bot{
+    z-index: -1;
   }
 </style>

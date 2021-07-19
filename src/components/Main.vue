@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main py-5">
       <div class="container">
         <div class="row">
           <div class="col-8">
@@ -60,14 +60,14 @@
           </div>
 
           <div class="row">
-            <div v-for="(element,index) in array" :key="index" class="col-2 ">
+            <div v-for="(element,index) in array" :key="index" class="col-2 mb-2">
               <div class="card" style="height:20rem ;width: 15rem;">
                 <img :src="'/img/'+element.img" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">{{element.type}}</h5>
                   <p class="card-text"><strong>{{element.name}}</strong></p>
                   <hr>
-                  <p class="card-text">
+                  <p class="card-text d-flex justify-content-between">
                     <span v-if="element.vote!=0"> <span v-for="(e,i) in element.vote" :key="i"><img src="/img/starfull.svg" alt=""></span><span v-for="(e,i) in 5-element.vote" :key="i"><img src="/img/staremptyl.svg" alt=""></span></span>    
                     <span v-else><strong>{{element.time}} </strong></span>
                   <strong> ${{element.cost}}</strong></p>
@@ -122,8 +122,9 @@
       </div>
 
       <div class="container-fluid mb-5">
-        <div class="row">       
-          <h3>slider</h3>
+        <div class="row text-center my-3">       
+          <h3><strong>Popular courses</strong></h3>
+          <div>Discover our most popular courses for self learning</div>
         </div>
         <div class="row flex-nowrap overflow-hidden my-slide" >
             <div v-for="(element,index) in array" :key="'A,'+index" class="col-2 " :style="
@@ -211,6 +212,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+  .main{
+    background-color: white;
+  }
 
   .my-img-cat{
     width: 100%;

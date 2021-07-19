@@ -1,21 +1,21 @@
 <template>
-  <div>
+  <div class="header">
       <div class="container-fluid">
         <div class="row d-flex justify-content-between">
-          <div class="col-4">
+          <div class="col-4 my-3">
               <div>dropdown lingue</div>
           </div>
-          <div class="col-8">
+          <div class="col-8 my-3">
               <nav class="first-nav d-flex justify-content-end">
                   <div>
                     <ul>
-                      <li>menu 1nav</li>
-                      <li>menu 1nav</li>
-                      <li>menu 1nav</li>
-                      <li>menu 1nav</li>
-                      <li>menu 1nav</li>
-                      <li>menu 1nav</li>
-                      <li>menu 1nav</li>
+                      <li>Courses</li>
+                      <li>Zoom</li>
+                      <li>Pages</li>
+                      <li>Bundles</li>
+                      <li>Course Formats</li>
+                      <li>Add Course</li>
+                      <li>Demos</li>
                     </ul>
                   </div>
                   <div class="icone">
@@ -33,10 +33,10 @@
           <hr>
         </div>
         <div class="row mb-5">
-          <div class="col-2">
+          <div class="col-2 d-flex  align-items-center">
             <img src="/img/MasterStudy_logo.svg" alt="">
           </div>
-          <div class="col-4 d-flex">
+          <div class="col-4 d-flex  align-items-center">
             <div class="dropdown d-inline-block mx-3">
                     <div><i class="fas fa-bars"></i><strong>CATEGORY</strong></div>
                     <ul class="my-category ">
@@ -53,7 +53,7 @@
               <div class="btn btn-primary"><i class="fas fa-search"></i></div>
             </div>
           </div>
-          <div class="col-3">
+          <div class="col-3 d-flex align-items-center">
               <a href="#"><i class="fas fa-bullhorn"></i>Became a istructor</a>
               <a class="mx-4" href="#"><i class="fas fa-briefcase"></i>For enterprise</a>
           </div>
@@ -77,7 +77,7 @@
               <div class="col-6"><img src="/img/base.png" alt=""></div>
           </div>
         </div>
-        <div class="container mb-5">
+        <div class="container ">
             <div class="row mt-5 justify-content-evenly">
               <div class="col-4 mx-3 box-test"> 
                   <div class="icon"><i class="fas fa-globe-europe"></i></div>
@@ -108,6 +108,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .header{
+    background-color: white;
+  }
   .first-nav{
     *{
       margin: 0 7px;
