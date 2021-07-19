@@ -33,12 +33,25 @@
           <hr>
         </div>
         <div class="row mb-5">
-          <div class="col-3">
+          <div class="col-2">
             <img src="/img/MasterStudy_logo.svg" alt="">
           </div>
-          <div class="col-3">
+          <div class="col-4 d-flex">
+            <div class="dropdown d-inline-block mx-3">
+                    <div><i class="fas fa-bars"></i><strong>CATEGORY</strong></div>
+                    <ul class="my-category ">
+                      <li>ART</li>
+                      <li>EXERCISE</li>
+                      <li>MATERIAL DESIGN</li>
+                      <li>MUSIC</li>
+                      <li>PHOTOGRAPY</li>
+                      <li>SOFTWARE DEVELEPMENT</li>
+                    </ul>
+            </div>
+            <div class="d-inline-block">
               <input type="text" class="serch-text" placeholder="Inserisci la tua email">
               <div class="btn btn-primary"><i class="fas fa-search"></i></div>
+            </div>
           </div>
           <div class="col-3">
               <a href="#"><i class="fas fa-bullhorn"></i>Became a istructor</a>
@@ -46,7 +59,7 @@
           </div>
           <div class="col-3">
             <a href="#"><i class="far fa-user"></i>Log in</a>
-            <div class="btn btn-primary rounded-pill mx-3 sign-btn"><strong>SIGN UP </strong></div>
+            <div class="btn btn-primary rounded-pill mx-5 sign-btn"><strong>SIGN UP </strong></div>
             <a href="#" class="fs-3"><i class="far fa-bookmark"></i></a>
           </div>
           <nav>
@@ -54,8 +67,8 @@
           </nav>
         </div>
         </div>
-        <div class="container">
-            <div class="row align-items-center mt-5">
+        <div class="container my-cont-jumbo">
+            <div class="row align-items-center ">
               <div class="col-6 jumbo">
                   <h2>Start Investing in You</h2>
                   <div class="jumbo-text">With over 1200 courses in 18 subjects, you're guaranteed to find something that's right for you.</div>
@@ -106,6 +119,10 @@ export default {
 
     }
   }
+
+  .my-cont-jumbo{
+    margin-top:85px ;
+  }
   .box-test{
     height: 215px;
     width: 379px;
@@ -131,9 +148,33 @@ export default {
   }
   .serch-text{
     padding: 5px 30px;
+    background-color: #F0F2F5;
   }
 
   .sign-btn{
     padding: 10px 25px;
+  }
+
+  .dropdown{
+      color: #767676;
+      position: relative;
+    .my-category{
+      margin-top:13px;
+        display: none;
+        color: #000;
+        border:1px solid lightgray;
+        list-style: none;
+        position: absolute;
+        li{
+          margin: 5px 0px;
+        }
+    }
+
+    &:hover{
+       .my-category{
+        display: block;
+        
+        }
+    }
   }
 </style>
