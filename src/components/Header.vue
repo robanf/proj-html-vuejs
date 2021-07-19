@@ -2,8 +2,13 @@
   <div class="header">
       <div class="container-fluid">
         <div class="row d-flex justify-content-between">
-          <div class="col-4 my-3">
-              <div>dropdown lingue</div>
+          <div class="col-4 my-3 dropdown">
+              <div>Inglese</div>
+              <ul class="my-lenguage ">
+                  <li> Inglese</li>
+                  <li>Italiano</li>
+                  <li>Spagnolo</li>
+              </ul>
           </div>
           <div class="col-8 my-3">
               <nav class="first-nav d-flex justify-content-end">
@@ -11,11 +16,35 @@
                     <ul>
                       <li>Courses</li>
                       <li>Zoom</li>
-                      <li>Pages</li>
+                      <li class="dropdown">Pages
+                        <ul class="my-nav-drop">
+                          <li>link</li>
+                          <li>link</li>
+                          <li>link</li>
+                          <li>link</li>
+                          <li>link</li>
+                        </ul>
+                      </li>
                       <li>Bundles</li>
-                      <li>Course Formats</li>
+                      <li class="dropdown">Course Formats
+                        <ul class="my-nav-drop">
+                          <li>link</li>
+                          <li>link</li>
+                          <li>link</li>
+                          <li>link</li>
+                          <li>link</li>
+                        </ul>
+                      </li>
                       <li>Add Course</li>
-                      <li>Demos</li>
+                      <li class="dropdown">Demos
+                        <ul class="my-nav-drop">
+                          <li>link</li>
+                          <li>link</li>
+                          <li>link</li>
+                          <li>link</li>
+                          <li>link</li>
+                        </ul>
+                      </li>
                     </ul>
                   </div>
                   <div class="icone">
@@ -161,22 +190,59 @@ export default {
   .dropdown{
       color: #767676;
       position: relative;
+      padding-bottom:10px ;
     .my-category{
-      margin-top:13px;
+      margin-top:10px;
        white-space: nowrap;
         display: none;
         color: #000;
-        border:1px solid lightgray;
+        box-shadow: 10px 10px 5px grey;
         list-style: none;
         position: absolute;
         li{
           margin: 5px 0px;
         }
     }
+    .my-lenguage{
+      margin-top:10px;
+       white-space: nowrap;
+        display: none;
+        color: #000;
+        background-color:  lightgray;
+        list-style: none;
+        position: absolute;
+        li{
+          margin: 5px 0px;
+        }
+    }
+    .my-nav-drop{
+      text-align: center;
+      /* margin-top:7px; */
+        width: 100px;
+        padding-right: 20px;
+        display: none;
+        color: #000;
+        box-shadow: 10px 10px 5px grey;
+        border:1px solid gray;
+        border-top:4px solid lime ;
+        background-color: white;
+        list-style: none;
+        position: absolute;
+        li{
+          margin: 5px 0px;
+          text-align: center;
+          &:hover{
+            color: lime;
+          }
+        }
+    }
 
     &:hover{
-       .my-category{
+       .my-category , .my-lenguage , .my-nav-drop{
         display: block;
+        li{
+          display: block;
+        }
         
         }
     }
