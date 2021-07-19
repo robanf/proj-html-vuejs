@@ -127,8 +127,7 @@
         </div>
         <div class="row flex-nowrap overflow-hidden my-slide" >
             <div v-for="(element,index) in array" :key="'A,'+index" class="col-2 " :style="
-            'animation-duration: 3s;'+
-              'animation-name: flush;'+
+              'transition: 300ms ease all;'+
             ' transform: translateX('+muovi+'px);'"
             >
               <div class="card" style="height:20rem ;width: 15rem;">
@@ -225,6 +224,7 @@ export default {
       img{
         height: 82%;
         width: 95%;
+        transition: 300ms ease all;
       }
 
     }

@@ -49,7 +49,7 @@
                     </ul>
             </div>
             <div class="d-inline-block">
-              <input type="text" class="serch-text" placeholder="Inserisci la tua email">
+              <input type="text" class="serch-text border-0" placeholder="Search courses">
               <div class="btn btn-primary"><i class="fas fa-search"></i></div>
             </div>
           </div>
@@ -147,7 +147,7 @@ export default {
       }
   }
   .serch-text{
-    padding: 5px 30px;
+    padding: 6px 30px;
     background-color: #F0F2F5;
   }
 
@@ -160,6 +160,7 @@ export default {
       position: relative;
     .my-category{
       margin-top:13px;
+       white-space: nowrap;
         display: none;
         color: #000;
         border:1px solid lightgray;
