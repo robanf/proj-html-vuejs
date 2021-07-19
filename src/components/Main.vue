@@ -48,13 +48,13 @@
           <div class="col text-center filtro">
             <h2>Recent courses</h2>
             <ul>
-              <li class="d-inline-block mx-2">categoria</li>
-              <li class="d-inline-block mx-2">categoria</li>
-              <li class="d-inline-block mx-2">categoria</li>
-              <li class="d-inline-block mx-2">categoria</li>
-              <li class="d-inline-block mx-2">categoria</li>
-              <li class="d-inline-block mx-2">categoria</li>
-              <li class="d-inline-block mx-2">categoria</li>
+              <li class="d-inline-block mx-2 my-categorie">All Categories</li>
+              <li class="d-inline-block mx-2 my-categorie">Art</li>
+              <li class="d-inline-block mx-2 my-categorie">Exercise</li>
+              <li class="d-inline-block mx-2 my-categorie">Material Design</li>
+              <li class="d-inline-block mx-2 my-categorie">Music</li>
+              <li class="d-inline-block mx-2 my-categorie">Photography</li>
+              <li class="d-inline-block mx-2 my-categorie">Software Development</li>
             </ul>
 
           </div>
@@ -82,7 +82,7 @@
       <div class="container-fluid mt-5 my-numbers">
         <div class="row">
           <div class="col text-center filtro">
-            <h2>We are Proud</h2>
+            <h2 class="mt-5">We are Proud</h2>
             <div>Certificate courses are instructed by highly educated and qualified instructors who hold doctoral and master’s level degrees.</div>
 
           </div>

@@ -18,7 +18,9 @@
                       <li class="position-relative">Zoom 
                         <div class="box-red rounded-top rounded-end">Hot</div>
                       </li>
-                      <li class="dropdown">Pages
+                      <li class="dropdown">
+                        <div class="dropdown">
+                        Pages
                         <ul class="my-nav-drop">
                           <li>link</li>
                           <li>link</li>
@@ -26,9 +28,13 @@
                           <li>link</li>
                           <li>link</li>
                         </ul>
+
+                        </div>
                       </li>
                       <li>Bundles</li>
-                      <li class="dropdown">Course Formats
+                      <li class="dropdown">
+                        <div class="dropdown">
+                          Course Formats
                         <ul class="my-nav-drop">
                           <li>link</li>
                           <li>link</li>
@@ -36,18 +42,24 @@
                           <li>link</li>
                           <li>link</li>
                         </ul>
+                          
+                          </div> 
                       </li>
                       <li class="position-relative">Add Course
                         <div class="box-red rounded-top rounded-end">Hot</div>
                       </li>
-                      <li class="dropdown">Demos
-                        <ul class="my-nav-drop">
-                          <li>link</li>
-                          <li>link</li>
-                          <li>link</li>
-                          <li>link</li>
-                          <li>link</li>
-                        </ul>
+                      <li class="dropdown">
+                        <div class="dropdown">
+                          Demos
+                          <ul class="my-nav-drop">
+                            <li>link</li>
+                            <li>link</li>
+                            <li>link</li>
+                            <li>link</li>
+                            <li>link</li>
+                          </ul>
+
+                        </div>
                       </li>
                     </ul>
                   </div>
@@ -195,6 +207,7 @@ export default {
       color: #767676;
       position: relative;
       padding-bottom:10px ;
+      
     .my-category{
       margin-top:10px;
        white-space: nowrap;
@@ -222,8 +235,8 @@ export default {
     .my-nav-drop{
       text-align: center;
       /* margin-top:7px; */
-        width: 100px;
-        padding-right: 20px;
+        width: 80px;
+        left: 0px;
         display: none;
         color: #000;
         box-shadow: 10px 10px 5px grey;
@@ -232,6 +245,9 @@ export default {
         background-color: white;
         list-style: none;
         position: absolute;
+        
+        padding: 0px;
+      
         li{
           margin: 5px 0px;
           text-align: center;
