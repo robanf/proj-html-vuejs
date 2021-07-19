@@ -15,7 +15,9 @@
                   <div>
                     <ul>
                       <li>Courses</li>
-                      <li>Zoom</li>
+                      <li class="position-relative">Zoom 
+                        <div class="box-red rounded-top rounded-end">Hot</div>
+                      </li>
                       <li class="dropdown">Pages
                         <ul class="my-nav-drop">
                           <li>link</li>
@@ -35,7 +37,9 @@
                           <li>link</li>
                         </ul>
                       </li>
-                      <li>Add Course</li>
+                      <li class="position-relative">Add Course
+                        <div class="box-red rounded-top rounded-end">Hot</div>
+                      </li>
                       <li class="dropdown">Demos
                         <ul class="my-nav-drop">
                           <li>link</li>
@@ -246,5 +250,16 @@ export default {
         
         }
     }
+  }
+
+  .box-red{
+    font-size: 10px;
+    position: absolute;
+    color: white;
+    top: -14px;
+    right: -13px;
+    padding: 1px 3px;
+    border: 1px solid rgb(211, 28, 28);
+    background-color: rgb(211, 28, 28);
   }
 </style>
