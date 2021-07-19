@@ -33,10 +33,22 @@
           <hr>
         </div>
         <div class="row mb-5">
-          <div class="col-3">logo</div>
-          <div class="col-3"> dropdown e serchbar</div>
-          <div class="col-3"> link inutili</div>
-          <div class="col-3"> registrazione</div>
+          <div class="col-3">
+            <img src="/img/MasterStudy_logo.svg" alt="">
+          </div>
+          <div class="col-3">
+              <input type="text" class="serch-text" placeholder="Inserisci la tua email">
+              <div class="btn btn-primary"><i class="fas fa-search"></i></div>
+          </div>
+          <div class="col-3">
+              <a href="#"><i class="fas fa-bullhorn"></i>Became a istructor</a>
+              <a class="mx-4" href="#"><i class="fas fa-briefcase"></i>For enterprise</a>
+          </div>
+          <div class="col-3">
+            <a href="#"><i class="far fa-user"></i>Log in</a>
+            <div class="btn btn-primary rounded-pill mx-3 sign-btn"><strong>SIGN UP </strong></div>
+            <a href="#" class="fs-3"><i class="far fa-bookmark"></i></a>
+          </div>
           <nav>
               
           </nav>
@@ -116,5 +128,12 @@ export default {
         font-size: 25px;
         padding: 10px 20px;
       }
+  }
+  .serch-text{
+    padding: 5px 30px;
+  }
+
+  .sign-btn{
+    padding: 10px 25px;
   }
 </style>

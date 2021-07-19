@@ -16,10 +16,55 @@
       </div>
       <div class="container my-5">
         <div class="row">
-          <div class="col-3"> footer che deve scomparire</div>
-          <div class="col-3"> footer che deve scomparire</div>
-          <div class="col-3"> footer che deve scomparire</div>
-          <div class="col-3"> footer che deve scomparire</div>
+          <div class="col-3">
+            <h3>About</h3>
+            <div>
+              Masterstudy is Education WordPress theme featured by Learning Management System (LMS) for online education.
+              Developed by StylemixThemes.
+            </div>
+          </div>
+          <div class="col-3">
+            <h3>Contact</h3>
+            <div>USA, Callifornia 20, First Avenue, Callifornia</div>
+            <div>
+                +1 212 458 300 32 <br>
+                  +1 212 375 24 14
+            </div>
+          </div>
+          <div class="col-3">
+            <h3>Pages</h3>
+            <div class="d-inline-block">
+              <ul class="me-3">
+                <li><a href="#">blog</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">shortcode</a></li>
+              </ul>
+            </div>
+            <div class="d-inline-block">
+              <ul>
+                <li><a href="#">courses</a></li>
+                <li><a href="#">blblb</a></li>
+                <li><a href="#">bòbòb</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-3">
+            <h3>Blog</h3>
+            <div class="d-flex my-3">
+                <img src="/img/photo-1517520287167-4bbf64a00d66-75x75.jpeg" alt="" class="d-inline-block img-strana">
+                <div class="d-inline-block ms-3">
+                  <div>Our main target is to “Developing Yourself as a Leader”</div>
+                  <div>August 9, 2018</div>
+                </div>
+            </div>  
+            <div class="d-flex ">
+                <img src="/img/photo-1490376840453-5f616fbebe5b-75x75.jpeg" alt="" class="d-inline-block">
+                <div class="d-inline-block ms-3">
+                  <div>Those Other College Expenses You Aren`t Thinking About</div>
+                  <div> June 3, 2015</div>
+                </div>
+            </div>
+          </div>
         </div>
       </div>
   </div>
@@ -44,5 +89,9 @@ export default {
         margin-left: 150px;
         background-color: white;
       }
+  }
+  .img-strana{
+    height: 75px;
+    width: 80px;
   }
 </style>

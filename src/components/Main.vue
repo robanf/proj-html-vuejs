@@ -126,7 +126,11 @@
           <h3>slider</h3>
         </div>
         <div class="row flex-nowrap overflow-hidden my-slide" >
-            <div v-for="(element,index) in array" :key="'A'+index" class="col-2 " :style="'transform: translateX('+muovi+'px);'">
+            <div v-for="(element,index) in array" :key="'A,'+index" class="col-2 " :style="
+            'animation-duration: 3s;'+
+              'animation-name: flush;'+
+            ' transform: translateX('+muovi+'px);'"
+            >
               <div class="card" style="height:20rem ;width: 15rem;">
                 <img :src="'/img/'+element.img" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -303,8 +307,7 @@ export default {
 
   .my-arrow{
     background-color: wheat;
-     animation-name:slidein;
-     animation-duration: 3s;
+
   }
 
   
@@ -315,22 +318,18 @@ export default {
 
   }
 
-  .box{
-    height: 50px;
-    width: 50px;
-    background-color: crimson;
+  @keyframes flush
+  { from{
+      transform: translate(0px);
+    }
+    to{
+
+      transform: translateX(muovi + px);
+    }
+  
   }
-
-
       
-.slide-enter-enter-active {
-  transition: slidein .3s infinite;
-}
-
-.slide-fade-enter
-/* .slide-fade-leave-active below version 2.1.8 */ {
-  transform: translateX(100px);
-}
+    
 
     @keyframes slidein {
               
