@@ -187,6 +187,11 @@ export default {
         font-size: 50px;
         color:#316FCE;
       }
+
+      &:hover{
+        transition: 300ms ease all;
+        transform: translatey(-10px);
+      }
   }
   .jumbo{
       h2{

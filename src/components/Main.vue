@@ -3,31 +3,31 @@
       <div class="container">
         <div class="row">
           <div class="col-8">
-            <img class="my-img-cat" src="/img/cat_1-1540x750.jpg" alt="">
+            <img class="my-img-cat img-zoom" src="/img/cat_1-1540x750.jpg" alt="">
             <div><strong>Softwere Developer</strong></div>
           </div>
           <div class="col-4 my-img-cat-second">
             <div class="mb-3">
-              <img src="/img/cat_2-370x155.jpg" alt="">
+              <img src="/img/cat_2-370x155.jpg" alt="" class="img-zoom">
               <div><strong>Art</strong></div>
             </div>
             <div>
-              <img src="/img/cat_3-370x155.jpg" alt="">
+              <img src="/img/cat_3-370x155.jpg" alt="" class="img-zoom">
               <div><strong>Material Design</strong></div>
             </div>
           </div>
         </div>
         <div class="row my-4 my-img-cat-terzo">
             <div class="col-4">
-              <img src="/img/cat_4-370x155.jpg" alt="">
+              <img src="/img/cat_4-370x155.jpg" alt="" class="img-zoom">
               <div><strong>Exercize</strong></div>
             </div>
             <div class="col-4">
-              <img src="/img/cat_5-370x155.jpg" alt="">
+              <img src="/img/cat_5-370x155.jpg" alt="" class="img-zoom">
               <div><strong>Music</strong></div>
             </div>
             <div class="col-4">
-              <img src="/img/cat_6-370x155.jpg" alt="">
+              <img src="/img/cat_6-370x155.jpg" alt="" class="img-zoom">
               <div><strong>Photography</strong></div>
             </div>
         </div>
@@ -72,6 +72,7 @@
                     <span v-else><strong>{{element.time}} </strong></span>
                   <strong> ${{element.cost}}</strong></p>
                 </div>
+                <!-- <div></div> -->
               </div>
             </div>
           </div>
@@ -121,7 +122,7 @@
         </div>
       </div>
 
-      <div class="container-fluid mb-5">
+      <div class="container-fluid py-3 mb-5 my-cont-slyder">
         <div class="row text-center my-3">       
           <h3><strong>Popular courses</strong></h3>
           <div>Discover our most popular courses for self learning</div>
@@ -147,8 +148,8 @@
         </div>
         <div class="row d-flex justify-content-center my-4">
             <div class="col d-flex justify-content-center">
-              <div class="p-3 my-arrow mx-3" id="right" @click="left"><i class="fas fa-arrow-left"></i></div>
-              <div class="p-3 my-arrow mx-3" @click="right"><i class="fas fa-arrow-right"></i></div>
+              <div class="p-3 my-arrow " id="right" @click="left"><i class="fas fa-arrow-left"></i></div>
+              <div class="p-3 my-arrow " @click="right"><i class="fas fa-arrow-right"></i></div>
             </div>
         </div>
       </div>
@@ -160,7 +161,7 @@
             <div class="ms-3">
               <h3><strong>Become an Instructor</strong></h3>
               <div class="my-2">Teach what you love. Masterstudy gives you the tools to create a course.</div>
-              <div class="btn btn-primary rounded-pill my-btn">START TECHING</div>
+              <div class="btn btn-primary rounded-pill my-btn green">START TECHING</div>
             </div>
           </div>
           <div class="col-6 my-twin d-flex align-items-center mx-4">
@@ -168,7 +169,7 @@
             <div class="ms-3">
               <h3><strong>Setup For Business</strong></h3>
               <div class="my-2">Get unlimited access to 2,500 of Udemy’s top courses for your team.</div>
-              <div class="btn btn-primary rounded-pill my-btn">DOING BUISNESS</div>
+              <div class="btn btn-primary rounded-pill my-btn green">DOING BUISNESS</div>
             </div>
           </div>
         </div>
@@ -221,6 +222,13 @@ export default {
     width: 100%;
   }
 
+  .img-zoom{
+    &:hover{
+      transition: 300ms ease all;
+      transform: scale(1.05);
+    }
+  }
+
   .my-img-cat-second{
     div{
       height: 50%;
@@ -263,6 +271,12 @@ export default {
         font-size: 25px;
         padding: 10px 20px;
       }
+  }
+  .green{
+    &:hover{
+      background-color: #46C197;
+      border:1px solid #46C197;
+    }
   }
 
   .filtro{
@@ -311,10 +325,18 @@ export default {
   }
 
   .my-arrow{
-    background-color: wheat;
-
+    background-color: white;
+    border: 1px solid gray;
+    color: gray;
+    &:hover{
+      background-color: #457992;
+      color: white;
+    }
   }
 
+.my-cont-slyder{
+  background-color: #F0F4FA;
+}
   
 
   .my-slide{
