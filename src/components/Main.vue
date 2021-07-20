@@ -61,7 +61,7 @@
 
           <div class="row">
             <div v-for="(element,index) in array" :key="index" class="col-2 mb-2">
-              <div class="card" style="height:20rem ;width: 15rem;">
+              <div class="card position-relative overflow-hidden" style="height:20rem ;width: 15rem;">
                 <img :src="'/img/'+element.img" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">{{element.type}}</h5>
@@ -72,7 +72,11 @@
                     <span v-else><strong>{{element.time}} </strong></span>
                   <strong> ${{element.cost}}</strong></p>
                 </div>
-                <!-- <div></div> -->
+                <div v-if="element.special=='hot'" class="hot">HOT</div>
+                <div v-if="element.special=='new'" class="new">NEW</div>
+                <div v-if="element.special=='special'" class="special">SPECIAL</div>
+                <div v-if="element.feat" class="feat">FEATURED</div>
+                <!-- <div class="my-hover-oncard "></div> -->
               </div>
             </div>
           </div>
@@ -132,17 +136,21 @@
               'transition: 300ms ease all;'+
             ' transform: translateX('+muovi+'px);'"
             >
-              <div class="card" style="height:20rem ;width: 15rem;">
+              <div class="card position-relative overflow-hidden" style="height:20rem ;width: 15rem;">
                 <img :src="'/img/'+element.img" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">{{element.type}}</h5>
                   <p class="card-text"><strong>{{element.name}}</strong></p>
                   <hr>
-                  <p class="card-text">
+                  <p class="card-text d-flex justify-content-between">
                     <span v-if="element.vote!=0"> <span v-for="(e,i) in element.vote" :key="i"><img src="/img/starfull.svg" alt=""></span><span v-for="(e,i) in 5-element.vote" :key="i"><img src="/img/staremptyl.svg" alt=""></span></span>    
                     <span v-else><strong>{{element.time}} </strong></span>
                   <strong> ${{element.cost}}</strong></p>
                 </div>
+                <div v-if="element.special=='hot'" class="hot">HOT</div>
+                <div v-if="element.special=='new'" class="new">NEW</div>
+                <div v-if="element.special=='special'" class="special">SPECIAL</div>
+                <div v-if="element.feat" class="feat">FEATURED</div>
               </div>
               </div>
         </div>
@@ -369,6 +377,68 @@ export default {
             }
           }
 
+.hot{
+    position: absolute;
+    color: white;
+    font-size: 12px;
+    padding: 3px;
+    top: 10px;
+    right: 10px;
+    border:1px solid red;
+    background-color: red;
+}
 
+.new{
+    position: absolute;
+    color: white;
+    font-size: 12px;
+    padding: 3px;
+    top: 10px;
+    right: 10px;
+    border:1px solid #1DB874;
+    background-color: #1DB874;
+}
+
+.special{
+    position: absolute;
+    color: white;
+    font-size: 12px;
+    padding: 3px;
+    top: 10px;
+    right: 10px;
+    border:1px solid #F09B23;
+    background-color: #F09B23;
+}
+
+.feat{
+    position: absolute;
+    color: white;
+    font-size: 12px;
+    width: 150px;
+    padding: 3px;
+    text-align: center;
+    top: 20px;
+    left: -35px;
+    font-weight: bolder;
+    transform:rotate(-45deg);
+    border:1px solid #F09B23;
+    background-color: #F09B23;
+}
+
+.my-hover-oncard{
+  display: none;
+}
+
+/* .card:hover{ 
+    overflow: none;
+  .my-hover-oncard{
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 40px;
+  background-color: white;
+}
+} */
 
 </style>
