@@ -119,7 +119,14 @@
                   <div class="jumbo-text">With over 1200 courses in 18 subjects, you're guaranteed to find something that's right for you.</div>
                   <div class="btn btn-primary rounded-pill my-btn">Join for free </div>
               </div>
-              <div class="col-6"><img src="/img/base.png" alt=""></div>
+              <div class="col-6 my-img-jumbo">
+                    <img src="/img/base.png" alt="">
+                    <img src="/img/book1.png" alt="" class="my-img-uno">
+                    <img src="/img/book2.png" alt="" class="my-img-due">
+                    <img src="/img/bubblespeech.png" alt="" class="my-img-tre">
+                    <img src="/img/magnifier.png" alt="" class="my-lente">
+                    <img src="/img/moon.png" alt="" class="my-moon">
+                </div>
           </div>
         </div>
         <div class="container ">
@@ -277,5 +284,95 @@ export default {
     padding: 1px 3px;
     border: 1px solid rgb(211, 28, 28);
     background-color: rgb(211, 28, 28);
+  }
+
+
+  .my-img-jumbo{
+    position:relative;
+      .my-img-uno{
+          position: absolute;
+          right: 82px;
+          top: 112px;
+          animation-name: book-uno;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+     }
+     .my-img-due{
+       position: absolute;
+       bottom: 43px;
+       left: 230px;
+        animation-name: book-due;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+        }
+     .my-img-tre{
+        position: absolute;
+          right: 80px;
+          top: 65px;
+          animation-name: cloud-uno;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+     }
+     .my-lente{
+        position: absolute;
+        bottom: 111px;
+        right: 117px;
+        animation-name: lente-uno;
+          animation-duration: 3s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+     }
+     .my-moon{
+       position: absolute;
+       top: 133px;
+       left: 125px;
+     }
+  }
+
+  @keyframes book-uno {
+      from{
+        right: 82px;
+          top: 112px;
+      }
+      to{
+
+          top: 122px;
+      }
+  }
+
+  @keyframes book-due {
+      from{
+        bottom: 43px;
+       left: 230px;
+      }
+      to{
+
+          bottom: 53px;
+      }
+  }
+
+   @keyframes cloud-uno {
+      from{
+        right: 80px;
+          top: 65px;
+      }
+      to{
+
+          top: 75px;
+      }
+  }
+
+   @keyframes lente-uno {
+      from{
+        bottom: 111px;
+        right: 117px;
+      }
+      to{
+
+          bottom: 121px;
+      }
   }
 </style>
